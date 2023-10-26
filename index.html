@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+      body {
+        background-color: #525252;
+        margin: 0;     
+        font-family: 'Onest', sans-serif; 
+        font-size: 24px;
+        color: rgb(254, 254, 254);
+      }
+        
+      div {
+        min-height: 100px;
+        margin-bottom: 50px;
+      }
+      .menu{
+        padding:35px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background-color: rgb(255, 255, 255,0.1); 
+
+      }
+      .flag{
+        width: 50px;
+        padding: 32px;
+        position: absolute;
+        left: 100px;
+        
+      }
+      input{
+        height: 60px;
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+        flex: 1;
+        padding-left: 100px;
+        color: white;
+        font-size: 24px;
+      }
+      .input-container{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        position: relative;
+  
+      }
+      .currency{
+        position: absolute;
+        right: 120px;
+        font-size: 20px;
+        color: rgb(250, 250, 250);
+        font-weight: 24px;
+    
+      }
+      .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      button{
+          background-color: white;
+          padding: 0 32px;
+          height: 50px;
+          border: unset;
+          font-size: 24px;
+          border-radius: 10px;
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+          cursor: pointer;
+
+      
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu">
+      <img src="img/menu.png" alt="" />
+      Währungrechner
+    </div>
+    <div class="input-container">
+      <img class="flag" src="img/Eu.jpg" alt="" />
+      <input value="0.0" id="euroField" type="text" />
+      <span class="currency">EUR</span>
+    </div>
+    <div class="center">
+      <img src="img/arrows.png" alt="" />
+    </div>
+    <div class="input-container">
+      <img class="flag" src="img/usa.jpg" alt="" />
+      <input value="0.0" id=usdField type="text" />
+      <span class="currency">USD</span>
+    </div>
+    <div class="center">
+      <button onclick="calc()">Berechnen</button>
+    </div>
+    <script src="script.js"></script>
+   
+  </body>
+</html>
